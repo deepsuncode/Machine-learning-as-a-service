@@ -16,7 +16,7 @@ sklearn
 scikit-learn
 sklearn_extensions
 
-To install the required packages, you may use Python package manager pip as follows:
+To install the required packages(recommended), u may use Python package manager pip as follows:
 1.	Copy the above packages into a text file, i.e., requirements.txt
 2.	Execute the command:
 	pip install -r requirements.txt
@@ -39,34 +39,6 @@ After downloading the zip files from https://web.njit.edu/~wangj/MLaaS/, unzip t
  mlaas_test.py    - Python program to test/predict a trained model
  mlaas_train.py   - Python program to train a model
  mlaas_utils.py   - utilities program used by the test and training programs
- 
-Running a Test/Prediction Task:
-1.	To run a test/prediction, you may use the existing data sets from the "test_dataî directory or provide your own file. 
-2.	mlaas_test.py is used to run the test/prediction. 
-Type: python mlaas_test.py -h will show you the available options as follows:
-	usage: mlaas_test.py [-h] [-t TEST_DATA_FILE] [-l LOGFILE] [-v VERBOSE] [-a ALGORITHM] [-m MODELID]
-
-optional arguments:
-  -h, --help show this help message and exit
-  -t TEST_DATA_FILE, --test_data_file TEST_DATA_FILE
-        full path to a file includes test data to test/predict using a trained model, must be in csv with comma separator.
-  -l LOGFILE, --logfile LOGFILE
-        full path to a file to write logging information about current execution.
-  -v VERBOSE, --verbose VERBOSE
-        True/False value to include logging information in result json object, note that result will contain a lot of information
-  -a ALGORITHM, --algorithm ALGORITHM
-		Algorithm to use for training. Available algorithms: ENS, RF, MLP, and ELM. 
-		ENS the Ensemble algorithm is the default, RF Random Forest algorithm, 
-		MLP Multilayer Perceptron algorithm, ELM Extreme Learning Machine.
-  -m MODELID, --modelid MODELID
-        model id to save or load it as a file name. This is to identity each trained model.
-3.	Examples to run a test:
-	python mlaas_test.py   #to run the default test dataset using default models.
-
-	python mlaas_test.py -m test_id -t test_data\flaringar_simple_random_40.csv 
-	To run a test/prediction on the trained model with id  test_id and a test dataset.
-
-You may change the options as you wish to test/predict the desired test data.
 
 Running a Training Task:
 1.	mlaas_train.py is used to run the training. 
@@ -92,4 +64,33 @@ optional arguments:
 
 	python mlaas_train.py -m test_id -t train_data\flaringar_training_sample.csv 
 	To run a training job with model id test_id and the given training data file.
+
+ 
+Running a Test/Prediction Task:
+1.	To run a test/prediction, you may use the existing data sets from the "test_data‚Äù directory or provide your own file. 
+2.	mlaas_test.py is used to run the test/prediction. 
+Type: python mlaas_test.py -h will show you the available options as follows:
+	usage: mlaas_test.py [-h] [-t TEST_DATA_FILE] [-l LOGFILE] [-v VERBOSE] [-a ALGORITHM] [-m MODELID]
+
+optional arguments:
+  -h, --help show this help message and exit
+  -t TEST_DATA_FILE, --test_data_file TEST_DATA_FILE
+        full path to a file includes test data to test/predict using a trained model, must be in csv with comma separator.
+  -l LOGFILE, --logfile LOGFILE
+        full path to a file to write logging information about current execution.
+  -v VERBOSE, --verbose VERBOSE
+        True/False value to include logging information in result json object, note that result will contain a lot of information
+  -a ALGORITHM, --algorithm ALGORITHM
+		Algorithm to use for training. Available algorithms: ENS, RF, MLP, and ELM. 
+		ENS the Ensemble algorithm is the default, RF Random Forest algorithm, 
+		MLP Multilayer Perceptron algorithm, ELM Extreme Learning Machine.
+  -m MODELID, --modelid MODELID
+        model id to save or load it as a file name. This is to identity each trained model.
+3.	Examples to run a test:
+	python mlaas_test.py   #to run the default test dataset using default models.
+
+	python mlaas_test.py -m test_id -t test_data\flaringar_simple_random_40.csv 
+	To run a test/prediction on the trained model with id  test_id and a test dataset.
+
+You may change the options as you wish to test/predict the desired test data.
 
