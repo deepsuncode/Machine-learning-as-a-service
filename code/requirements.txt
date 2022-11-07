@@ -1,6 +1,7 @@
-pandas
-numpy
-scikit-learn
-sklearn_extensions
-pathlib
+pandas==1.5.1
+numpy==1.22.4
+scikit-learn==0.23.2
+sklearn_extensions==0.0.2
+pathlib==1.0.1
+scipy==1.6.3
 
