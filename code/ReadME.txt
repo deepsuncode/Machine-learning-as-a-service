@@ -60,9 +60,9 @@ optional arguments:
   -m MODELID, --modelid MODELID
         model id to save or load it as a file name. This is to identity each trained model.
 2.	Examples to run a training:
-	python mlaas_train.py	#to run a training job with default parameters.
+	```python mlaas_train.py```	#to run a training job with default parameters.
 
-	python mlaas_train.py -m test_id -t train_data\flaringar_training_sample.csv 
+	```python mlaas_train.py -m test_id -t ..\data\train_data\flaringar_training_sample.csv```
 	To run a training job with model id test_id and the given training data file.
 
  
@@ -87,9 +87,9 @@ optional arguments:
   -m MODELID, --modelid MODELID
         model id to save or load it as a file name. This is to identity each trained model.
 3.	Examples to run a test:
-	python mlaas_test.py   #to run the default test dataset using default models.
+	```python mlaas_test.py```   #to run the default test dataset using default models.
 
-	python mlaas_test.py -m test_id -t test_data\flaringar_simple_random_40.csv 
+	```python mlaas_test.py -m test_id -t \..data\test_data\flaringar_simple_random_40.csv``` 
 	To run a test/prediction on the trained model with id  test_id and a test dataset.
 
 You may change the options as you wish to test/predict the desired test data.
