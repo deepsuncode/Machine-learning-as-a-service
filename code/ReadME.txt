@@ -60,7 +60,7 @@ optional arguments:
   -m MODELID, --modelid MODELID
         model id to save or load it as a file name. This is to identity each trained model.
 2.	Examples to run a training:
-	python mlaas_train.py```	#to run a training job with default parameters.
+	python mlaas_train.py	#to run a training job with default parameters.
 	python mlaas_train.py -m test_id -t ..\data\train_data\flaringar_training_sample.csv
 	To run a training job with model id test_id and the given training data file.
 
