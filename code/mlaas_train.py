@@ -26,8 +26,8 @@ import time
 
 from mlaas_utils import *
 
-TRAIN_INPUT = 'train_data/flaringar_training_sample.csv'
-TEST_INPUT = 'test_data/flaringar_simple_random_40.csv'
+TRAIN_INPUT = '../data/train_data/flaringar_training_sample.csv'
+TEST_INPUT = '../data/test_data/flaringar_simple_random_40.csv'
 normalize_data = False
 def train_model(args):
     algorithm = args['algorithm']

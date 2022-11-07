@@ -26,7 +26,7 @@ import time
 
 from mlaas_utils import *
 
-TEST_INPUT = 'test_data/flaringar_simple_random_40.csv'
+TEST_INPUT = '../data/test_data/flaringar_simple_random_40.csv'
 normalize_data = False 
 
 def test_models(args):
